@@ -59,6 +59,9 @@
           </ul>
         </div>
         <form action="./success.html" class="sign-up-form__email-input">
+          <label for="email" id="error-message" class="sign-up-form__label--error error"
+            >Valid email required</label
+          >
           <label for="email" class="sign-up-form__label">Email address</label
           ><br />
           <input
@@ -69,6 +72,8 @@
             placeholder="email@company.com"
           /><br />
           <input
+            id="submit-btn"
+            ;
             class="sign-up-form__submit-btn"
             type="submit"
             value="Subscribe to monthly newsletter"
