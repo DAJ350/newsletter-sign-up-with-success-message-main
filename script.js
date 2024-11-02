@@ -22,6 +22,8 @@ function formValidation(e) {
     emailInput.style.backgroundColor = "rgba(255, 97, 85, 15%)";
     emailInput.style.borderColor = "var(--vermellion)";
     emailInput.style.color = "var(--vermellion)";
+  } else {
+    return localStorage.setItem("emailInput", `${emailInput.value}`);
   }
 }
 
