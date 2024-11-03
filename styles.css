@@ -6,6 +6,10 @@
   font-family: "Roboto";
 }
 
+html {
+  height: 100svh;
+}
+
 :root {
   /* Color */
   --white: #fff;
@@ -21,7 +25,7 @@
   );
 
   /* Font-Size */
-  --heading: 3.5rem;
+  --heading: clamp(2.5rem, 2.148rem + 1.502vw, 3.5rem);
   --body: 1rem;
   --body-small: 0.75rem;
 
@@ -41,7 +45,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100svh;
+  min-height: 100svh;
 }
 
 .sign-up-form {
@@ -172,8 +176,9 @@ body {
 }
 
 .success-card__dismiss-link {
-    padding: 1.125rem 7.8125rem 0.875rem;
-    text-wrap: nowrap;
+  display: inline-block;
+  padding: 1.0625rem 6.25rem;
+  text-wrap: nowrap;
 }
 
 /* Error States */
@@ -188,4 +193,48 @@ body {
   position: absolute;
   right: 0;
   color: var(--vermellion);
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 48rem) and (min-width: 21.875rem) {
+  .sign-up-form {
+    width: 100%;
+    min-height: 100svh;
+    flex-flow: column;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .sign-up-form__img,
+  .sign-up-form__img--mobile {
+    width: 100%;
+    height: auto;
+  }
+
+  .sign-up-form__text-content {
+    width: 87.2%;
+    padding: 2.5rem 0;
+    height: 100%;
+  }
+
+  .success-card {
+    width: 100%;
+    height: 100svh;
+    border-radius: 0;
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .success-card__content-container {
+    margin: 9.3125rem 0 32.3%;
+  }
+
+  .success-card__success-graphic {
+    margin-bottom: 2.5rem;
+  }
+
+  .success-card__dismiss-link {
+    width: 100%;
+    text-align: center;
+  }
 }
