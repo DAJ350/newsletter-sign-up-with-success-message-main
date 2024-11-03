@@ -175,6 +175,10 @@ body {
   box-shadow: 0 0.9375rem 3.75rem 0 rgba(0, 0, 0, 25%);
 }
 
+.success-card__success-graphic {
+  margin-bottom: 2.5rem;
+}
+
 .success-card__dismiss-link {
   display: inline-block;
   padding: 1.0625rem 6.25rem;
@@ -209,7 +213,7 @@ body {
   .sign-up-form__img,
   .sign-up-form__img--mobile {
     width: 100%;
-    height: auto;
+    max-height: 284px;
   }
 
   .sign-up-form__text-content {
@@ -227,10 +231,6 @@ body {
 
   .success-card__content-container {
     margin: 9.3125rem 0 32.3%;
-  }
-
-  .success-card__success-graphic {
-    margin-bottom: 2.5rem;
   }
 
   .success-card__dismiss-link {
